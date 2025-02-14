@@ -1,0 +1,121 @@
+<div id="biodata" class="type-app-biodata">
+    <div id="scroller-biodata" class="scroll-box-biodata">
+        <section class="scroll-item-biodata satu">
+            <div class="box-item-biodata">
+                <div class="box-section-biodata section1 background">
+                    <div class="box-content-section1">
+                        <h1>BIODATA</h1>
+                        <div class="description-biodata">
+                            <p>
+                                Samnan was born on December 11, 2002, in Moradabad.
+                                Grew up in New Delhi.<br><br>
+                                Currently studying Economics at Jamia Millia Islamia, New Delhi.
+                            </p>
+                        </div>
+                    </div>
+                    <div id="scroll-down-biodata" class="biodata-scroll-box bounce2 active">
+                        <span>Scroll</span>
+                        <i class="fa-solid fa-angles-down"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="scroll-item-biodata dua scroller">
+            <div id="box-item-biodata-0" class="box-item-biodata scroll-true">
+                <div class="box-section-biodata section2 background">
+                    <div class="box-content-section2">
+                        <h1>EDUCATION</h1>
+                        <div class="education-box">
+                            <div class="education-item">
+                                <h3>2009-2019</h3>
+                                <span>J.N International School, Sarita Vihar, New Delhi </span>
+                            </div>
+                            <div class="education-item">
+                                <h3>2019 - 2022</h3>
+                                <span>Dev Samaj Modern School, Nehru Nagar, New Delhi</span>
+                            </div>
+                            <div class="education-item">
+                                <h3>2022 - Now</h3>
+                                <span>Jamia Millia Islamia, New Delhi</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="scroll-item-biodata tiga scroller">
+            <div id="box-item-biodata-1" class="box-item-biodata scroll-true">
+                <div class="box-section-biodata section3 background">
+                    <div class="box-content-section3">
+                        <h1>HOBBY</h1>
+                        <div class="hobby-box">
+                            <div class="hobby-box-item">
+                                <div class="hobby-name"><span>Gym</span></div>
+                                <div class="hobby-bar gym" data-width="80%"></div>
+                            </div>
+                            <div class="hobby-box-item">
+                                <div class="hobby-name"><span>Music</span></div>
+                                <div class="hobby-bar music" data-width="70%"></div>
+                            </div>
+                            <div class="hobby-box-item">
+                                <div class="hobby-name"><span>Gadgets</span></div>
+                                <div class="hobby-bar gadgets" data-width="60%"></div>
+                            </div>
+                            <div class="hobby-box-item">
+                                <div class="hobby-name"><span>Tech Explorer</span></div>
+                                <div class="hobby-bar tech" data-width="75%"></div>
+                            </div>
+                            <div class="hobby-box-item">
+                                <div class="hobby-name"><span>Gaming</span></div>
+                                <div class="hobby-bar gaming" data-width="90%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="scroll-item-biodata empat scroller">
+            <div id="box-item-biodata-2" class="box-item-biodata scroll-true">
+                <div class="box-section-biodata section4 background">
+                    <div class="box-content-section4">
+                        <h1>SKILL</h1>
+                        <div class="skill-box">
+                            <div class="skill-item">
+                                <h3>FrontEnd</h3>
+                                <span>HTML, CSS, JavaScript</span>
+                            </div>
+                            <div class="skill-item">
+                                <h3>WordPress</h3>
+                                <span>Elementor Developer</span>
+                            </div>
+                            <div class="skill-item">
+                                <h3>Data Management</h3>
+                                <span>MySQL, Python</span>
+                            </div>
+                            <div class="skill-item">
+                                <h3>Role</h3>
+                                <span>Web Development, Data Analytics</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+
+<!-- JavaScript to Animate Progress Bars -->
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        let bars = document.querySelectorAll(".hobby-bar");
+        bars.forEach((bar) => {
+            let width = bar.getAttribute("data-width");
+            setTimeout(() => {
+                bar.style.width = width;
+            }, 500);
+        });
+    });
+</script>

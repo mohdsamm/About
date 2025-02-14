@@ -1,0 +1,726 @@
+/* Reset and Global Styles */
+body {
+    margin: 0;
+}
+
+/* Hide Scrollbar */
+::-webkit-scrollbar {
+    display: none;
+}
+
+/* Full-Size Section */
+.full-size {
+    background-color: rgb(110, 110, 110);
+    width: 100vw;
+    height: 100vh;
+}
+
+/* Bounce Animation */
+.bounce2 {
+    animation: bounce2 2s ease infinite;
+}
+
+@keyframes bounce2 {
+    0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+    40% { transform: translateY(-10%); }
+    60% { transform: translateY(-5%); }
+}
+
+/* Desktop View */
+@media screen and (min-width: 500px) {
+
+    /* Main Container */
+    .type-app-biodata {
+        background: rgba(0, 0, 0, 0.7);
+        width: 60vw;
+        height: 60vh;
+        display: flex;
+        flex-direction: column;
+        border-radius: 15px;
+        backdrop-filter: blur(20px);
+        animation: fadeIn 0.2s ease forwards;
+        top: 15%;
+        overflow: hidden;
+    }
+
+    /* Scrollable Box */
+    .scroll-box-biodata {
+        width: 100%;
+        height: 100%;
+        overflow-y: auto;
+        scroll-snap-type: y mandatory;
+    }
+
+    .scroll-item-biodata {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        scroll-snap-align: start;
+    }
+
+    /* Box Items */
+    .box-item-biodata {
+        width: 100%;
+        height: 100%;
+    }
+
+    .box-item-biodata.scroll-true {
+        transform: translateY(100%);
+        opacity: 0;
+        transition: 1s ease-in-out;
+    }
+
+    .box-item-biodata.active {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    /* Sections */
+    .box-section-biodata {
+        width: 100%;
+        height: 100%;
+        border-radius: 15px;
+        display: flex;
+    }
+
+    /* Background Styling */
+    .background {
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+
+    /* Section 1 */
+    .box-section-biodata.section1 {
+        background: url('../assets/mnn.jpg') no-repeat right / cover;
+    }
+
+    .box-content-section1 {
+        position: absolute;
+        top: 13%;
+        left: 10%;
+        width: 55%;
+        height: 70%;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        overflow: hidden;
+    }
+
+    .box-content-section1 h1 {
+        margin: 0;
+        color: #ff9dad;
+        font-size: 200%;
+    }
+
+    /* Description */
+    .description-biodata {
+        margin-top: 8%;
+        width: 100%;
+        height: 70%;
+        display: flex;
+        overflow-y: auto;
+    }
+
+    .description-biodata span {
+        color: #ffffff;
+        font-size: 150%;
+        text-shadow: 0 0 10px #000000;
+    }
+
+    /* Scroll Indicator */
+    .biodata-scroll-box {
+        width: 70px;
+        position: absolute;
+        bottom: 5%;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: white;
+        opacity: 0;
+        pointer-events: none;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .biodata-scroll-box.active {
+        opacity: 1;
+    }
+
+    .biodata-scroll-box span {
+        font-size: 20px;
+        margin-bottom: 5px;
+    }
+
+    .biodata-scroll-box i {
+        font-size: 15px;
+    }
+}
+
+
+/* Section 2 */
+.box-section-biodata.section2 {
+    background: url('../assets/n.jpg') no-repeat left / cover;
+}
+
+/* Content Box */
+.box-content-section2 {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    width: 40%;
+    height: 90%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.box-content-section2 h1 {
+    margin: 0;
+    color: #c2ffc4;
+    font-size: 200%;
+    text-align: right;
+}
+
+/* Education Box */
+.education-box {
+    width: 100%;
+    height: 80%;
+    margin-top: 10%;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+}
+
+/* Education Item */
+.education-item {
+    width: 100%;
+    margin-bottom: 5%;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    transition: transform 0.3s ease-in-out;
+}
+
+.education-item:hover {
+    transform: translateY(5%);
+}
+
+/* Education Titles */
+.education-item h3 {
+    margin: 0;
+    color: #c2ffc4;
+    font-size: 90%;
+    text-shadow: 0 0 10px rgb(0, 0, 0);
+}
+
+/* Education Description */
+.education-item span {
+    margin: 0;
+    color: #ffffff;
+    font-size: 120%;
+    text-shadow: 0 0 10px rgb(0, 0, 0);
+}
+
+
+/* Section 3 */
+.box-section-biodata.section3 {
+    background: url('../assets/6644-3840x2160-desktop-4k-assassins-creed-background.jpg') no-repeat right / cover;
+}
+
+/* Content Box */
+.box-content-section3 {
+    position: relative;
+    top: 10%;
+    left: 10%;
+    width: 55%;
+    height: 70%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow: hidden;
+}
+
+.box-content-section3 h1 {
+    margin: 0;
+    color: #a7d2ff;
+    font-size: 200%;
+}
+
+/* Hobby Section */
+.hobby-box {
+    margin: 5% 0 0 4%;
+    width: 100%;
+    height: 80%;
+}
+
+/* Hobby Item */
+.hobby-box-item {
+    margin-bottom: 2%;
+    width: 100%;
+    height: 15%;
+    display: flex;
+    align-items: center;
+}
+
+/* Hobby Name */
+.hobby-name {
+    width: 13%;
+    display: flex;
+    align-items: center;
+}
+
+.hobby-name span {
+    text-align: center;
+    color: white;
+    font-size: 120%;
+    text-shadow: 0 0 10px rgb(0, 0, 0);
+    overflow: hidden;
+}
+
+/* Hobby Bar */
+.hobby-bar {
+    background-color: #89b3df;
+    margin-left: 5%;
+    height: 20%;
+    border-radius: 5px;
+    transition: filter 0.2s ease-in-out;
+}
+
+.hobby-bar:hover {
+    filter: brightness(80%);
+}
+
+/* Hobby Progress Widths */
+.hobby-bar.coding { width: 70%; }
+.hobby-bar.music { width: 50%; }
+.hobby-bar.gadget { width: 30%; }
+.hobby-bar.tech { width: 10%; }
+.hobby-bar.game { width: 1%; }
+
+/* Section 4 */
+.box-section-biodata.section4 {
+    background: url('../assets/6645-3840x2160-desktop-4k-assassins-creed-background-photo.jpg') no-repeat left / cover;
+}
+
+/* Content Box */
+.box-content-section4 {
+    position: relative;
+    top: 10%;
+    left: 60%;
+    width: 30%;
+    height: 80%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow: hidden;
+}
+
+.box-content-section4 h1 {
+    margin: 0;
+    color: #e85739;
+    font-size: 200%;
+    text-align: right;
+}
+
+/* Skill Box */
+.skill-box {
+    margin-top: 10%;
+    width: 100%;
+    height: 80%;
+    overflow-y: auto;
+}
+
+/* Skill Item */
+.skill-item {
+    margin-bottom: 5%;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+}
+
+.skill-item:hover {
+    transform: translateX(-5%);
+    filter: brightness(150%);
+}
+
+/* Skill Titles */
+.skill-item h3,
+.skill-item span {
+    margin: 0;
+    font-size: 100%;
+    text-align: right;
+    text-shadow: 0 0 10px rgb(0, 0, 0);
+}
+
+.skill-item h3 {
+    color: #c53c21;
+}
+
+.skill-item span {
+    color: #ffffff;
+}
+
+
+
+/* Mobile Styles */
+@media screen and (max-width: 500px) {
+
+    /* Box Container */
+    .type-app-biodata {
+        background-color: rgba(0, 0, 0, 0.6);
+        width: 80vw;
+        height: 60vh;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        top: 50%;
+        border-radius: 15px;
+        backdrop-filter: blur(20px);
+        opacity: 1;
+        animation: fadeIn 0.2s ease forwards;
+    }
+    
+    /* Scroll Box */
+    .scroll-box-biodata {
+        width: 100%;
+        height: 100%;
+        overflow-y: auto;
+        scroll-snap-type: y mandatory;
+    }
+    
+    /* Scroll Item */
+    .scroll-item-biodata {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        scroll-snap-align: start;
+    }
+    
+    /* Box Item */
+    .box-item-biodata {
+        width: 100%;
+        height: 100%;
+    }
+    
+    .box-item-biodata.scroll-true {
+        position: relative;
+        transform: translateY(100%);
+        opacity: 0;
+        transition: transform 1s ease, opacity 1s ease;
+    }
+    
+    .box-item-biodata.active {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    
+    /* Section Styling */
+    .box-section-biodata {
+        width: 100%;
+        height: 100%;
+        border-radius: 15px;
+        display: flex;
+    }
+    
+    /* Header & Body */
+    .header-section-biodata, 
+    .body-section-biodata {
+        width: 100%;
+    }
+    
+    /* Background Image */
+    .background {
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+    }
+    
+
+/* Section 1 */
+
+.box-section-biodata.section1 {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3)), url('../assets/mnn.jpg');
+    background-position: 85%;
+    position: relative;
+}
+
+.box-content-section1 {
+    /* background-color: rgb(255, 0, 0); */
+    position: relative;
+    top: 13%;
+    left: 10%;
+    width: 70%;
+    height: 70%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow: hidden;
+}
+
+.box-content-section1 h1 {
+    margin: 0;
+    color: #ff9dad;
+    font-size: 150%;
+}
+
+.description-biodata {
+    margin-top: 15%;
+    /* background-color: rebeccapurple; */
+    width: 100%;
+    height: 70%;
+    display: flex;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.description-biodata span {
+    color: #ffffff;
+    font-size: 90%;
+    /* text-shadow: 0 0 10px #000000; */
+}
+.biodata-scroll-box {
+    width: 70px;
+    position: absolute;
+    top: 95%;
+    left: 50%;
+    translate: -50% -100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    opacity: 0;
+    pointer-events: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.biodata-scroll-box.active {
+    opacity: 1;
+}
+
+.biodata-scroll-box span {
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+
+.biodata-scroll-box i {
+    font-size: 8px;
+}
+
+/* Section 2 */
+
+.box-section-biodata.section2 {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3)), url('../assets/n.jpg');
+    background-position: 10%;
+}
+
+.box-content-section2 {
+    /* background-color: aqua; */
+    position: relative;
+    top: 10%;
+    left: 25%;
+    width: 70%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow-x: hidden;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.box-content-section2 h1 {
+    margin: 0;
+    color: #c2ffc4;
+    font-size: 150%;
+    text-align: right;
+}
+
+.education-box {
+    /* background-color: #e85739; */
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    margin-top: 15%;
+    display: flex;
+    flex-direction: column;
+}
+
+.education-item {
+    /* background-color: #a7d2ff; */
+    width: 100%;
+    margin-bottom: 8%;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+    transition: all 0.3s ease;
+}
+
+.education-item:hover {
+    transform: translateY(10%);
+}
+
+.education-item h3 {
+    margin: 0;
+    color: #c2ffc4;
+    font-size: 60%;
+    text-align: right;
+    /* text-shadow: 0 0 10px rgb(0, 0, 0); */
+}
+
+.education-item span {
+    margin: 0;
+    color: #ffffff;
+    font-size: 90%;
+    text-align: right;
+    /* text-shadow: 0 0 10px rgb(0, 0, 0); */
+}
+
+/* Section 3 */
+
+.box-section-biodata.section3 {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3)), url('../assets/6644-3840x2160-desktop-4k-assassins-creed-background.jpg');
+    background-position: 88%;
+}
+
+.box-content-section3 {
+    /* background-color: aqua; */
+    position: relative;
+    top: 10%;
+    left: 10%;
+    width: 80%;
+    height: 70%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow: hidden;
+}
+
+.box-content-section3 h1 {
+    margin: 0;
+    color: #a7d2ff;
+    font-size: 150%;
+}
+
+.hobby-box {
+    /* background-color: blue; */
+    margin-top: 12%;
+    width: 100%;
+    height: 80%;
+}
+
+.hobby-box-item {
+    /* background-color: white; */
+    margin-bottom: 2%;
+    width: 100%;
+    height: 15%;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+}
+
+.hobby-name {
+    /* background-color: blue; */
+    height: 100%;
+    width: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+
+.hobby-name span {
+    text-align: center;
+    color: white;
+    font-size: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* text-shadow: 0 0 10px rgb(0, 0, 0); */
+    overflow: hidden;
+}
+
+.hobby-bar {
+    background-color: #89b3df;
+    position: relative;
+    margin-left: 5%;
+    top: 8%;
+    height: 20%;
+    border: none;
+    border-radius: 5px;
+    transition: all 0.2s ease;
+}
+
+.hobby-bar:hover {
+    filter: brightness(80%);
+}
+
+.hobby-bar.game {width: 70%;}
+.hobby-bar.music {width: 50%;}
+.hobby-bar.gadgets {width: 30%;}
+.hobby-bar.tech {width: 10%;}
+.hobby-bar.gaming {width: 1%;}
+
+/* Section 4 */
+
+.box-section-biodata.section4 {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3)), url('../assets/6645-3840x2160-desktop-4k-assassins-creed-background-photo.jpg');
+    background-position: 20%;
+}
+
+.box-content-section4 {
+    /* background-color: aqua; */
+    position: relative;
+    top: 10%;
+    left: 10%;
+    width: 80%;
+    height: 80%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow: hidden;
+}
+
+.box-content-section4 h1 {
+    margin: 0;
+    color: #e85739;
+    font-size: 150%;
+    text-align: right;
+}
+
+.skill-box {
+    /* background-color: red; */
+    margin-top: 13%;
+    width: 100%;
+    height: 90%;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.skill-item {
+    /* background-color: #a7d2ff; */
+    margin-bottom: 7%;
+    /* width: 100%; */
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: all 0.3s ease;
+}
+
+.skill-item:hover {
+    transform: translateX(-5%);
+    filter: brightness(150%);
+}
+
+.skill-item h3 {
+    color: #c53c21;
+    margin: 0;
+    font-size: 80%;
+    text-align: right;
+    /* text-shadow: 0 0 10px rgb(0, 0, 0); */
+}
+
+.skill-item span {
+    color: #ffffff;
+    margin: 0;
+    font-size: 90%;
+    text-align: right;
+    /* text-shadow: 0 0 10px rgb(0, 0, 0); */
+}
+
+}
